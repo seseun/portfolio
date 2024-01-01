@@ -1,13 +1,30 @@
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import { ColorMode, extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
 
+interface ThemeProps {
+  colorMode: ColorMode;
+}
+
 const theme = extendTheme({
   config,
-  global: {},
+  styles: {
+    global: (props: ThemeProps) => ({
+      html: {
+        fontSize: "16px",
+      },
+      body: {
+        bg: props.colorMode === "dark" ? "gray.800" : "white",
+      },
+      ul: {
+        listStyle: "none",
+      },
+      p: { color: "gray.400", fontSize: "lg", lineHeight: "tall" },
+    }),
+  },
   fonts: {
     heading: `'Pretendard Variable', sans-serif`,
     body: `'Pretendard Variable', sans-serif`,
@@ -16,73 +33,26 @@ const theme = extendTheme({
   layerStyles: {
     main: {
       color: "gray.300",
-      minH: "100vh",
-      pb: 20,
-      width: "1280px",
       m: "0 auto",
-      section: {
-        alignItems: "stretch",
-        h2: {
-          fontSize: "4xl",
-          small: {
-            fontSize: "lg",
-            fontWeight: 600,
-            pl: 3,
-            color: "gray.600",
-          },
-        },
-        h3: {
-          fontSize: "2xl",
-          lineHeight: "tall",
-          small: {
-            fontSize: "lg",
-            fontWeight: 600,
-            pl: 3,
-            color: "gray.600",
-          },
-        },
-        p: { color: "gray.400", fontSize: "lg", lineHeight: "tall" },
-      },
+      minH: "100vh",
+      p: 20,
+      width: "1280px",
     },
-    prjBox: {
-      bgColor: "gray.900",
-      borderRadius: "2xl",
-      px: 8,
-      py: 5,
-    },
-    monitor: {
-      flex: "640px 0 0",
-      width: "640px",
-      height: "360px",
-      overflow: "auto",
-      borderWidth: "1rem",
-      borderRadius: "xl",
-      borderColor: "gray.700",
-      "::-webkit-scrollbar": {
-        width: "8px",
-      },
-      "::-webkit-scrollbar-thumb": {
-        bg: "gray.600",
-      },
-      "::-webkit-scrollbar-track": {
-        bg: "gray.800",
-      },
-    },
-    stackBox: {
-      display: "flex",
-      gap: 2,
-      // padding: 3,
-      // bgColor: "gray.800",
-      // borderRadius: "xl",
+    footer: {
+      bgColor: "gray.700",
+      bottom: 0,
+      color: "gray.500",
+      left: 0,
+      position: "fixed",
+      px: 4,
+      py: 0.5,
+      textAlign: "right",
       width: "100%",
-    },
-    stackBgBox: {
-      display: "flex",
-      gap: 2,
-      p: 3,
-      bgColor: "gray.800",
-      borderRadius: "xl",
-      width: "100%",
+      p: {
+        fontSize: "sm",
+        width: "1120px",
+        m: "0 auto",
+      },
     },
     iconList: {
       li: {
@@ -91,12 +61,11 @@ const theme = extendTheme({
         display: "flex",
         alginItems: "flex-start",
         w: "100%",
-        mt: 2,
         i: {
           pr: 2,
           fontStyle: "initial",
           flexShrink: 0,
-          "& + *": {
+          "& + *:not(a)": {
             flex: 1,
           },
         },
@@ -107,6 +76,7 @@ const theme = extendTheme({
         },
         p: {
           color: "gray.500",
+          fontSize: "md",
         },
       },
     },
@@ -115,10 +85,11 @@ const theme = extendTheme({
   components: {
     Badge: {
       baseStyle: {
-        px: 2,
+        px: 1.5,
         py: 0.5,
         borderRadius: "md",
         fontSize: "sm",
+        fontWeight: "600",
         textTransform: "none",
         lineHeight: "short",
       },

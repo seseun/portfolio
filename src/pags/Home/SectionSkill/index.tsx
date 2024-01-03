@@ -1,4 +1,4 @@
-import { Badge, HStack, Heading, VStack } from "@chakra-ui/react";
+import { Badge, Heading, VStack } from "@chakra-ui/react";
 import { forwardRef } from "react";
 
 import { Section } from "components";

@@ -74,7 +74,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
       )
       .fromTo(
         text2Ref.current,
-        { duration: 2, text: "" },
+        { text: "" },
         {
           duration: 2,
           text: "이승은",

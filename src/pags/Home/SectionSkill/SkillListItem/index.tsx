@@ -1,4 +1,4 @@
-import { HStack, Heading, Text } from "@chakra-ui/react";
+import { HStack, Heading } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface Props {

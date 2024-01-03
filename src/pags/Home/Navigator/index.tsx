@@ -18,6 +18,13 @@ function Navigator<T extends Record<string, unknown>>({
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Flex
       as="aside"
@@ -33,7 +40,7 @@ function Navigator<T extends Record<string, unknown>>({
       w={12}
       zIndex={99}
     >
-      <NavButton emoji="🫡" onClick={() => scrollToSection("profile")} />
+      <NavButton emoji="🫡" onClick={() => scrollToTop()} />
       <NavButton
         emoji="🎢"
         text="경력"
@@ -49,11 +56,7 @@ function Navigator<T extends Record<string, unknown>>({
         text="프로젝트"
         onClick={() => scrollToSection("project")}
       />
-      <NavButton
-        emoji="🙇‍♀️"
-        text="인삿말"
-        onClick={() => scrollToSection("finish")}
-      />
+      <NavButton emoji="🙇‍♀️" onClick={() => scrollToSection("finish")} />
     </Flex>
   );
 }

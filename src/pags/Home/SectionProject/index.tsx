@@ -117,7 +117,10 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               key: "wifree",
               subject: "[SI] WIFREE 와이파이 연결 서비스",
               link: "https://www.leotechkor.com/pages/business/wfs/wfs.html",
-              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발"],
+              comments: [
+                "서비스 내용에 대해 참고할 수 있는 URL입니다.",
+                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발",
+              ],
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
@@ -151,7 +154,10 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               key: "hmps",
               subject: "[자사서비스] HMPS",
               link: "https://www.upchain.kr/service/hmps",
-              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발"],
+              comments: [
+                "서비스 내용에 대해 참고할 수 있는 URL입니다.",
+                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발",
+              ],
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
@@ -209,6 +215,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               subject: "[SI] 큐비트 거래소",
               link: "https://www.qbitexchange.io/signup/setAccount.do",
               comments: [
+                "실제 개발한 화면입니다.",
                 "AML 프로세스를 위한 회원가입 단계 분할 퍼블리싱 및 API 연결 서포트",
                 "WEB 퍼블리싱 관련 유지보수",
               ],
@@ -257,7 +264,10 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               key: "eagles",
               subject: "[SI] Eagles System",
               link: "https://play.google.com/store/apps/details?id=com.synergy.client&hl=ko&gl=US",
-              comments: ["APP 퍼블리싱, ADMIN WEB 퍼블리싱"],
+              comments: [
+                "서비스 내용에 대해 참고할 수 있는 URL입니다. 앱 화면을 구현하였습니다.",
+                "APP 퍼블리싱, ADMIN WEB 퍼블리싱",
+              ],
               skills: (
                 <>
                   <Badge colorScheme="blue">React Native</Badge>
@@ -270,7 +280,10 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               key: "commons",
               subject: "[SI] COMMONS Goodch",
               link: "https://play.google.com/store/apps/details?id=com.mallup.goodch",
-              comments: [" APP 퍼블리싱 / 프론트 개발 서포트"],
+              comments: [
+                "서비스 내용에 대해 참고할 수 있는 URL입니다. 앱 화면을 구현하였습니다.",
+                "APP 퍼블리싱",
+              ],
               skills: (
                 <>
                   <Badge colorScheme="blue">React Native</Badge>
@@ -283,7 +296,10 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               key: "bcm-2020",
               subject: "[SI] BCM 2020(Busan Contents Market)",
               link: "https://www.upchain.kr/works/detail/bcm-2020",
-              comments: ["CLIENT, ADMIN WEB 퍼블리싱"],
+              comments: [
+                "서비스 내용에 대해 참고할 수 있는 URL입니다.",
+                "CLIENT, ADMIN WEB 퍼블리싱",
+              ],
               skills: (
                 <>
                   <Badge colorScheme="blue">Jsp</Badge>

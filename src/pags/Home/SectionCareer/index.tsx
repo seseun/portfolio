@@ -1,4 +1,4 @@
-import { Badge, Button, Heading, Text, VStack } from "@chakra-ui/react";
+import { Badge, Heading, Text, VStack } from "@chakra-ui/react";
 
 import { Section } from "components";
 import { forwardRef } from "react";
@@ -10,7 +10,7 @@ const SectionCareer = forwardRef<HTMLDivElement>((props, ref) => {
     <Section ref={ref} {...props}>
       <Heading as="h2">
         🎢 저를 알고 싶으시다면, 먼저 제 경력을 확인해주세요!
-        <Text as="small">총 6년 0개월 (2024.01 기준)</Text>
+        <Text as="small">총 6년 1개월 (2024.01 기준)</Text>
       </Heading>
       <CareerTimeline />
       <VStack align="stretch" spacing={12}>

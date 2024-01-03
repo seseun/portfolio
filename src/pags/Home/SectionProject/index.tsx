@@ -1,24 +1,36 @@
 import { Badge, Heading, VStack } from "@chakra-ui/react";
-import { forwardRef } from "react";
+import { forwardRef, useCallback, useState } from "react";
+import Gallery from "react-photo-gallery";
 
-import prjUpchain from "assets/images/prj_upchain.jpg";
+import { Section } from "components";
+import ProjectCard from "./ProjectCard";
+import ViewerModal from "./ViewerModal";
+
 import prjAugust from "assets/images/prj_august.jpg";
-import prjPure from "assets/images/prj_pure_organic.jpg";
-import prjHanonn from "assets/images/prj_hanonn.jpg";
-import prjGoodup from "assets/images/prj_goodup.jpg";
-import prjSolla from "assets/images/prj_solla.jpg";
 import prjBlue from "assets/images/prj_blue.jpg";
+import prjGoodup from "assets/images/prj_goodup.jpg";
+import prjHanonn from "assets/images/prj_hanonn.jpg";
 import prjHershey from "assets/images/prj_hershey.jpg";
-import des1909 from "assets/images/design_1909.jpg";
-import des19111 from "assets/images/design_1911_1.jpg";
+import prjPure from "assets/images/prj_pure_organic.jpg";
+import prjSolla from "assets/images/prj_solla.jpg";
+import prjUpchain from "assets/images/prj_upchain.jpg";
+
 import des19112 from "assets/images/design_1911_2.jpg";
 import des19113 from "assets/images/design_1911_3.jpg";
 import des19114 from "assets/images/design_1911_4.jpg";
 
-import { Section } from "components";
-import ProjectCard from "./ProjectCard";
-
 const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
+  const [currentImage, setCurrentImage] = useState<string>("");
+  const [viewerModalOpen, setViewerModalOpen] = useState<boolean>(false);
+  const openViewerModal = useCallback((e: any) => {
+    console.log(e);
+    setCurrentImage(e.target.src);
+    setViewerModalOpen(true);
+  }, []);
+  const closeViewerModal = () => {
+    setCurrentImage("");
+    setViewerModalOpen(false);
+  };
   return (
     <Section ref={ref} {...props}>
       <Heading as="h2">🚀 수행했던 프로젝트들이에요.</Heading>
@@ -28,12 +40,13 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           company="모비텍"
           subject="모비톡"
           date="2023.10 ~"
-          desc={`현재 제가 속한 회사에서는 공공기관을 대상으로 하는 문자 발송 시스템 서비스를 개발 중입니다.\n아직 배워야 할 부분이 많지만 찬찬히 제 역량을 향상시키고 있습니다.\n제가 최근에 어떤 기술을 사용하고 있는지를 보여드리기 위해 이 프로젝트를 포트폴리오에 추가했습니다.`}
+          desc={`현재 제가 속한 회사에서는 공공기관을 대상으로 하는 문자 발송 시스템 서비스를 개발 중입니다.\n제가 최근에 어떤 기술을 사용하고 있는지를 보여드리기 위해 이 프로젝트를 포트폴리오에 추가했습니다.`}
           comments={[
             "React, TypeScript를 사용하여 클라이언트들이 사용할 WEB을 구현하고 있습니다.",
-            "JWT를 이용한 로그인/로그아웃 기능을 맡아 구현하였습니다.",
-            "부서 관리 및 관리자 관리 파트를 맡아 작업하였습니다.",
-            "양방향 상담 관리 파트를 맡아 작업중입니다.",
+            "JWT를 이용한 로그인/로그아웃 기능을 맡아 구현하였습니다. Redux와 브라우저 쿠키를 사용했습니다.",
+            "관리자 및 부서 관리 파트 등에서 react-query를 이용해 CRUD 기능을 구현하였습니다.",
+            "폼 관련하여 react-hook-form 라이브러리를 이용하고 있습니다.",
+            "react/chakra-ui를 이용해 레이아웃을 구현하고 있습니다.",
           ]}
           skills={
             <>
@@ -289,33 +302,15 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           subject="디자인 작업물"
           date="2019.09 ~ 2019.11"
           desc={`웹 에이전시에서 작업했던 디자인 결과물들 중 몇 가지입니다.\n작업물들은 근무했던 각 업체 및 적용사이트에 소유권/저작권이 있습니다.`}
-          designs={[
-            {
-              key: "langbel",
-              imgUrl: des19114,
-              date: "2019.11",
-              subject: "[랑벨 글로벌 원스토어] 이벤트배너",
-            },
-            {
-              key: "chungdami-happy",
-              imgUrl: des19113,
-              date: "2019.11",
-              subject: "[청담i 성형외과] 이벤트배너",
-            },
-            {
-              key: "chungdami-egg",
-              imgUrl: des19112,
-              date: "2019.11",
-              subject: "[청담i 성형외과] 이벤트배너",
-            },
-          ]}
           skills={
             <>
               <Badge colorScheme="red">Adobe Photoshop</Badge>
               <Badge colorScheme="red">Adobe Illustrator</Badge>
             </>
           }
-        />
+        >
+          <Gallery photos={designs} onClick={openViewerModal} />;
+        </ProjectCard>
         <ProjectCard
           key="onedesign"
           company="원디자인"
@@ -389,7 +384,31 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           }
         />
       </VStack>
+      <ViewerModal
+        isOpen={viewerModalOpen}
+        onClose={closeViewerModal}
+        currentImage={currentImage}
+      />
     </Section>
   );
 });
+
+const designs = [
+  {
+    src: des19114,
+    width: 760,
+    height: 670,
+  },
+  {
+    src: des19113,
+    width: 533,
+    height: 1399,
+  },
+  {
+    src: des19112,
+    width: 533,
+    height: 1016,
+  },
+];
+
 export default SectionProject;

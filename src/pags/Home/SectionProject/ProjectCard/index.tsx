@@ -7,13 +7,13 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { ReactNode } from "react";
+
 import { SkillBox } from "components";
 import ProjectProps from "type/ProjectProps";
 import TemplateProps from "type/TemplateProps";
-import DesignProps from "type/DesignProps";
 import ProjectItem from "./ProjectItem";
 import TemplateItem from "./TemplateItem";
-import DesignItem from "./DesignItem";
 
 interface ProjectCardProps extends ProjectProps {
   company?: string;
@@ -22,7 +22,7 @@ interface ProjectCardProps extends ProjectProps {
   imgUrl?: string;
   templates?: TemplateProps[];
   projects?: ProjectProps[];
-  designs?: DesignProps[];
+  children?: ReactNode;
 }
 
 function ProjectCard({
@@ -36,7 +36,7 @@ function ProjectCard({
   comments,
   templates,
   projects,
-  designs,
+  children,
   skills,
 }: ProjectCardProps) {
   return (
@@ -54,6 +54,7 @@ function ProjectCard({
         <Text as="small">{date}</Text>
       </Heading>
       <Text whiteSpace="pre">{desc}</Text>
+      {children && children}
       {!projects ? (
         <HStack align="flex-end" spacing={5}>
           {imgUrl && (
@@ -144,17 +145,6 @@ function ProjectCard({
                   template={template}
                   key={`template-${key}-${index}`}
                 />
-              );
-            })}
-        </Box>
-      )}
-
-      {designs && (
-        <Box as="ul" display="flex" flexWrap="wrap" gap={5}>
-          {designs.length > 0 &&
-            designs.slice(0).map((design, index) => {
-              return (
-                <DesignItem design={design} key={`design-${key}-${index}`} />
               );
             })}
         </Box>

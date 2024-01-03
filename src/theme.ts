@@ -99,7 +99,7 @@ const theme = extendTheme({
       sizes: {},
       variants: {
         link: {
-          color: "blue.500",
+          color: "yellow.600",
           textDecoration: "underline",
           fontWeight: 500,
         },

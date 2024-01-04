@@ -13,11 +13,19 @@ function AppLayout() {
       <Outlet />
       <Box as="footer" layerStyle="footer">
         <Text>
-          * 구체적인 이력 내용은 포트폴리오 링크를 확인하신 이력서, 혹은{" "}
-          <Button variant="link" color="yellow.600">
+          * 구체적인 이력 내용은 포트폴리오 링크를 확인하신 이력서를
+          참고해주세요 :^)
+          {/* , 혹은{" "}
+          <Button
+            as="a"
+            href="/public/assets/이력서_이승은.pdf"
+            download
+            variant="link"
+            color="yellow.600"
+          >
             이 PDF파일
           </Button>
-          을 참고해주세요 :^)
+          을 참고해주세요  */}
         </Text>
       </Box>
     </Box>

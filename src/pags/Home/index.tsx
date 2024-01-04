@@ -43,8 +43,6 @@ function Home() {
             x: 0,
             opacity: 1,
           }),
-          // pin: true,
-          // markers: true,
         });
       });
     },

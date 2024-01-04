@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import AppLayout from './AppLayout';
-import { Home } from 'pags';
+import { Home } from "pags";
+import AppLayout from "./AppLayout";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<AppLayout />}>
-          <Route path='/' element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

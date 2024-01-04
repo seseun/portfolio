@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface ProjectProps {
-  key: string;
+  prjKey: string;
   subject: string;
   link?: string;
   comments?: Array<string | ReactNode>;

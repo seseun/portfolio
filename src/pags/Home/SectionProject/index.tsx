@@ -23,7 +23,6 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
   const [currentImage, setCurrentImage] = useState<string>("");
   const [viewerModalOpen, setViewerModalOpen] = useState<boolean>(false);
   const openViewerModal = useCallback((e: any) => {
-    console.log(e);
     setCurrentImage(e.target.src);
     setViewerModalOpen(true);
   }, []);
@@ -36,7 +35,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
       <Heading as="h2">🚀 수행했던 프로젝트들이에요.</Heading>
       <VStack align="stretch" spacing={5}>
         <ProjectCard
-          key="mobytalk"
+          prjKey="mobytalk"
           company="모비텍"
           subject="모비톡"
           date="2023.10 ~"
@@ -61,7 +60,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           }
         />
         <ProjectCard
-          key="up-renewal"
+          prjKey="up-renewal"
           company="유피체인"
           subject="자사 홈페이지 리뉴얼"
           date="2021.11 ~ 2022.07"
@@ -92,7 +91,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           }
         />
         <ProjectCard
-          key="up"
+          prjKey="up"
           company="유피체인"
           subject="이외 프로젝트 수행이력"
           date="2020.08 ~ 2023.03"
@@ -114,7 +113,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           }
           projects={[
             {
-              key: "wifree",
+              prjKey: "wifree",
               subject: "[SI] WIFREE 와이파이 연결 서비스",
               link: "https://www.leotechkor.com/pages/business/wfs/wfs.html",
               comments: [
@@ -129,7 +128,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "graduate",
+              prjKey: "graduate",
               subject: "[SI] 2023.02 영산대학교 메타버스 졸업전시회",
               comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발"],
               skills: (
@@ -140,7 +139,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "nft",
+              prjKey: "nft",
               subject: "[자사서비스] NFT거래소",
               comments: ["CLIENT WEB 퍼블리싱 및 프론트개발"],
               skills: (
@@ -151,7 +150,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "hmps",
+              prjKey: "hmps",
               subject: "[자사서비스] HMPS",
               link: "https://www.upchain.kr/service/hmps",
               comments: [
@@ -166,7 +165,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "bnk-mydata",
+              prjKey: "bnk-mydata",
               subject: "[SI] 부산은행 마이데이터(관리자)",
               comments: [
                 "이진씨엔에스 협업",
@@ -184,7 +183,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "solid",
+              prjKey: "solid",
               subject: "[SI] 솔리드 거래소",
               comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발"],
               skills: (
@@ -195,7 +194,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "coinbit",
+              prjKey: "coinbit",
               subject: "[SI] 코인빗 거래소",
               comments: ["디자인 변경 반영 및 유지보수"],
               skills: (
@@ -211,7 +210,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "qbit",
+              prjKey: "qbit",
               subject: "[SI] 큐비트 거래소",
               link: "https://www.qbitexchange.io/signup/setAccount.do",
               comments: [
@@ -232,13 +231,13 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "coldwallet",
+              prjKey: "coldwallet",
               subject: "[자사서비스] 콜드월렛 개발",
               comments: ["WINDOWS 응용프로그램 APP 프론트 개발"],
               skills: <Badge colorScheme="blue">Flutter</Badge>,
             },
             {
-              key: "wizard",
+              prjKey: "wizard",
               subject: "[SI] 위자드랩 웨어러블 디바이스 관리사이트",
               comments: ["ADMIN WEB 퍼블리싱 / 프론트 개발 서포트"],
               skills: (
@@ -249,7 +248,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "eum",
+              prjKey: "eum",
               subject: "[자사서비스] EUM(블록체인 안전결제)",
               comments: ["APP 퍼블리싱/프론트 서포트"],
               skills: (
@@ -261,7 +260,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "eagles",
+              prjKey: "eagles",
               subject: "[SI] Eagles System",
               link: "https://play.google.com/store/apps/details?id=com.synergy.client&hl=ko&gl=US",
               comments: [
@@ -277,7 +276,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "commons",
+              prjKey: "commons",
               subject: "[SI] COMMONS Goodch",
               link: "https://play.google.com/store/apps/details?id=com.mallup.goodch",
               comments: [
@@ -293,7 +292,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ),
             },
             {
-              key: "bcm-2020",
+              prjKey: "bcm-2020",
               subject: "[SI] BCM 2020(Busan Contents Market)",
               link: "https://www.upchain.kr/works/detail/bcm-2020",
               comments: [
@@ -313,7 +312,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           ]}
         />
         <ProjectCard
-          key="jt"
+          prjKey="jt"
           company="스튜디오제이티"
           subject="디자인 작업물"
           date="2019.09 ~ 2019.11"
@@ -328,14 +327,14 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           <Gallery photos={designs} onClick={openViewerModal} />;
         </ProjectCard>
         <ProjectCard
-          key="onedesign"
+          prjKey="onedesign"
           company="원디자인"
           subject="디자인 + 퍼블리싱 작업물"
           date="2017.01 ~ 2019.07"
           desc={`쇼핑몰 템플릿 업체에서 작업했던 디자인 + 퍼블리싱 결과물들 중 몇 가지입니다.\n작업물들은 근무했던 각 업체 및 적용사이트에 소유권/저작권이 있습니다.`}
           templates={[
             {
-              key: "august",
+              prjKey: "august",
               imgUrl: prjAugust,
               date: "2018.08",
               link: "https://ecudemo102131.cafe24.com/",
@@ -343,42 +342,42 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               desc: "'어거스트' 디자인은 판매 사이트(카페24디자인센터: https://d.cafe24.com/home/)에서 여러 번 1등을 한 적이 있고, 2018년 8월 등록 후 1년이 넘도록 상위권을 유지했던 템플릿 디자인으로 당시 회사에서 제작되어 왔던 템플릿 중 가장 많이 판매되어 회사에 기여도가 컸던 템플릿입니다.",
             },
             {
-              key: "pure",
+              prjKey: "pure",
               imgUrl: prjPure,
               date: "2019.06",
               subject: "[쇼핑몰템플릿] 퓨어 오가닉",
               link: "https://ecudemo127599.cafe24.com/",
             },
             {
-              key: "hanonn",
+              prjKey: "hanonn",
               imgUrl: prjHanonn,
               date: "2018.12 ~ 2019.01",
               subject: "[쇼핑몰템플릿] 하논",
               link: "https://ecudemo110146.cafe24.com/",
             },
             {
-              key: "hanonn",
+              prjKey: "hanonn",
               imgUrl: prjGoodup,
               date: "2018.09",
               subject: "[쇼핑몰템플릿] 굳업",
               link: "https://ecudemo105375.cafe24.com/",
             },
             {
-              key: "hanonn",
+              prjKey: "hanonn",
               imgUrl: prjSolla,
               date: "2018.06 ~ 2018.07",
               subject: "[쇼핑몰템플릿] 솔라",
               link: "https://ecudemo92389.cafe24.com/",
             },
             {
-              key: "hanonn",
+              prjKey: "hanonn",
               imgUrl: prjBlue,
               date: "2017.11 ~ 2018.01",
               subject: "[쇼핑몰템플릿] 블루",
               link: "https://ecudemo82341.cafe24.com/",
             },
             {
-              key: "hanonn",
+              prjKey: "hanonn",
               imgUrl: prjHershey,
               date: "2017.08 ~ 2017.10",
               subject: "[쇼핑몰템플릿] 허쉬",

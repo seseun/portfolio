@@ -1,5 +1,5 @@
 interface TemplateProps {
-  key: string;
+  prjKey: string;
   imgUrl?: string;
   date?: string;
   subject: string;

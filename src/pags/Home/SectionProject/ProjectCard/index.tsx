@@ -26,7 +26,7 @@ interface ProjectCardProps extends ProjectProps {
 }
 
 function ProjectCard({
-  key,
+  prjKey,
   company,
   subject,
   date,
@@ -95,7 +95,7 @@ function ProjectCard({
               comments.length > 0 &&
               comments.map((comment, index) => {
                 return (
-                  <Box as="li" key={`comment-${key}-${index}`} mt={2}>
+                  <Box as="li" key={`comment-${prjKey}-${index}`} mt={2}>
                     <Text as="i">📌</Text>
                     <Text>{comment}</Text>
                   </Box>
@@ -111,7 +111,7 @@ function ProjectCard({
                 return (
                   <ProjectItem
                     project={project}
-                    key={`project-${key}-${index}`}
+                    key={`project-${prjKey}-${index}`}
                   />
                 );
               })}
@@ -128,7 +128,7 @@ function ProjectCard({
                 return (
                   <ProjectItem
                     project={project}
-                    key={`project-${key}-${index}`}
+                    key={`project-${prjKey}-${index + 7}`}
                   />
                 );
               })}
@@ -143,7 +143,7 @@ function ProjectCard({
               return (
                 <TemplateItem
                   template={template}
-                  key={`template-${key}-${index}`}
+                  key={`template-${prjKey}-${index}`}
                 />
               );
             })}

@@ -41,7 +41,7 @@ function ProjectItem({ project }: ProjectItemProps) {
           project.comments.length > 0 &&
           project.comments.map((comment, index) => {
             return (
-              <Text as="p" key={`comment-${project.key}-${index}`}>
+              <Text as="p" key={`comment-${project.prjKey}-${index}`}>
                 - {comment}
               </Text>
             );

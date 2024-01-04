@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f69c33e.css",
+    "main.js": "/static/js/main.c90e9394.js",
+    "static/js/787.3dbfb4a4.chunk.js": "/static/js/787.3dbfb4a4.chunk.js",
+    "static/media/PretendardVariable.woff2": "/static/media/PretendardVariable.2bc582461caf4e05b51d.woff2",
+    "static/media/profile.jpg": "/static/media/profile.b6a28257fe3c282c8826.jpg",
+    "static/media/prj_upchain.jpg": "/static/media/prj_upchain.607b28faf6c6c4d1caa1.jpg",
+    "static/media/prj_blue.jpg": "/static/media/prj_blue.fa3b1342cbb2308eb002.jpg",
+    "static/media/design_1911_3.jpg": "/static/media/design_1911_3.6ee7153d7ee48fa92c6e.jpg",
+    "static/media/prj_hanonn.jpg": "/static/media/prj_hanonn.69d738621367125c635b.jpg",
+    "static/media/prj_pure_organic.jpg": "/static/media/prj_pure_organic.9ec9eb0f47612e79f983.jpg",
+    "static/media/prj_august.jpg": "/static/media/prj_august.b9486bdef68ecedfb39f.jpg",
+    "static/media/prj_hershey.jpg": "/static/media/prj_hershey.8a2ba39f6f4c014ca158.jpg",
+    "static/media/prj_solla.jpg": "/static/media/prj_solla.4431030c621d3e9e18bf.jpg",
+    "static/media/design_1911_4.jpg": "/static/media/design_1911_4.279263ad561914366a9b.jpg",
+    "static/media/design_1911_2.jpg": "/static/media/design_1911_2.07990e649637df6a10eb.jpg",
+    "static/media/prj_goodup.jpg": "/static/media/prj_goodup.f94512dd13d76fc897f6.jpg",
+    "index.html": "/index.html",
+    "main.5f69c33e.css.map": "/static/css/main.5f69c33e.css.map",
+    "main.c90e9394.js.map": "/static/js/main.c90e9394.js.map",
+    "787.3dbfb4a4.chunk.js.map": "/static/js/787.3dbfb4a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f69c33e.css",
+    "static/js/main.c90e9394.js"
+  ]
+}

@@ -60,24 +60,27 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
       .to(containerRef.current, {
         x: 0,
         opacity: 1,
+        duration: 0.4,
       })
       .to(imageRef.current, {
         x: 0,
         opacity: 1,
+        duration: 0.4,
       })
       .fromTo(
         text1Ref.current,
         { text: "" },
         {
           text: "안녕하세요,",
+          duration: 0.5,
         },
       )
       .fromTo(
         text2Ref.current,
         { text: "" },
         {
-          duration: 2,
           text: "이승은",
+          duration: 1.2,
         },
       )
       .fromTo(
@@ -85,6 +88,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
         { text: "" },
         {
           text: "입니다",
+          duration: 0.3,
         },
       )
       .fromTo(
@@ -93,6 +97,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
           text: "",
         },
         {
+          duration: 0.1,
           text: "🫡",
         },
       )
@@ -107,16 +112,18 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
           rotate: "20deg",
           scaleX: -1.4,
           scaleY: 1.4,
-          duration: 0.6,
+          duration: 0.4,
         },
       )
       .to(contactRef.current, {
         x: 0,
         opacity: 1,
+        duration: 0.4,
       })
       .to(descRef.current, {
         x: 0,
         opacity: 1,
+        duration: 0.4,
       });
   });
   return (
@@ -158,15 +165,14 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
           </HStack>
           <VStack align="stretch" spacing={1} fontSize="xl" ref={descRef}>
             <Text color="gray.300" fontSize="xl">
-              디자인, 퍼블리싱으로 IT업계에 발을 들이게 되었습니다.
+              현재 React, TypeScript 스택으로 웹 프론트 개발을 하고있습니다.
             </Text>
             <Text color="gray.300" fontSize="xl">
-              디자인보다는 퍼블리싱에, 퍼블리싱보다는 프론트개발에 재미를
-              느낍니다.
+              디자인, 퍼블리싱으로 IT업계에 발을 들이게 되어 해당 파트에 대한
+              이해도가 있습니다.
             </Text>
             <Text color="gray.300" fontSize="xl">
-              인터랙티브한 사이트에 관심이 있고, 잘 디자인 된 UI/UX를
-              좋아합니다.
+              반복되는 코드 개선, 그리고 협업을 좋아합니다.
             </Text>
           </VStack>
         </VStack>

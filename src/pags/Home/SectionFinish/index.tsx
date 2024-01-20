@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button, Heading, Text, VStack } from "@chakra-ui/react";
 import { forwardRef } from "react";
 

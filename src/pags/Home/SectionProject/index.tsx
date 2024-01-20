@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Badge, Heading, VStack } from "@chakra-ui/react";
 import { forwardRef, useCallback, useState } from "react";
 import Gallery from "react-photo-gallery";

@@ -110,6 +110,13 @@ const theme = extendTheme({
         colorScheme: "",
       },
     },
+    Modal: {
+      baseStyle: {
+        dialogContainer: {
+          outline: "none !important",
+        },
+      },
+    },
   },
 });
 

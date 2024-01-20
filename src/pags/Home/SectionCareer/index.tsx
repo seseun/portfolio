@@ -58,8 +58,8 @@ const SectionCareer = forwardRef<HTMLDivElement>((props, ref) => {
             프론트엔드 개발자로 전향을 결정하게 되었습니다.
             <br />
             <br />
-            현재 새로운 회사에서 <Badge colorScheme="blue">React</Badge>와
-            함께&nbsp;
+            현재 근무하고 있는 회사에서 <Badge colorScheme="blue">React</Badge>
+            와 함께&nbsp;
             <Badge colorScheme="blue">TypeScript</Badge>,
             <Badge colorScheme="blue">react-query</Badge> 등의
             <br />

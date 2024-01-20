@@ -12,12 +12,12 @@ function TemplateItem({ template }: TemplateItemProps) {
       display="flex"
       sx={{
         _notFirst: {
-          flex: "48% 1 1",
+          flex: "32% 1 1",
           flexDirection: "column",
           alignItems: "flex-start",
           figure: {
             w: "100%",
-            h: "500px",
+            h: "360px",
           },
           ul: {
             mt: 5,

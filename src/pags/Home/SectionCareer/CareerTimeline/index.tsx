@@ -58,29 +58,27 @@ function CareerTimeline() {
         >
           <Flex
             as="li"
-            bgGradient="linear(to-r, pink.400, pink.600)"
-            flex="43% 0 0"
+            bgGradient="linear(to-r, pink.500, purple.500)"
+            flex="46% 0 0"
             justify="flex-start"
-            mt={-8}
+            mt={10}
           >
             Design + Publishing
           </Flex>
           <Flex
             as="li"
-            bgGradient="linear(to-r, red.300, red.600)"
-            flex="4% 0 0"
-            justify="center"
+            bgGradient="linear(to-r, purple.600 40%, blue.400 100%)"
+            flex={1}
+            mt={5}
           >
-            Design
+            Publishing + Front-end
           </Flex>
           <Flex
             as="li"
-            bgGradient="linear(to-r, purple.500 40%, blue.500 100%)"
-            flex={1}
-            justify="flex-end"
-            mt={8}
+            bgGradient="linear(to-r, blue.500 40%, blue.700 100%)"
+            flex="10% 0 0"
           >
-            Publishing + Front-end
+            Front-end
           </Flex>
         </HStack>
       </HStack>

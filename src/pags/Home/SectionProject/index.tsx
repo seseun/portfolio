@@ -56,6 +56,11 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">react-query</Badge>
               <Badge colorScheme="blue">react-redux</Badge>
               <Badge colorScheme="blue">yarn</Badge>
+              <Badge colorScheme="red">Figma</Badge>
+              <Badge colorScheme="green">GitHub</Badge>
+              <Badge colorScheme="green">VSCode</Badge>
+              <Badge colorScheme="green">Swagger</Badge>
+              <Badge colorScheme="green">Postman</Badge>
             </>
           }
         />
@@ -95,7 +100,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           company="유피체인"
           subject="이외 프로젝트 수행이력"
           date="2020.08 ~ 2023.03"
-          desc={`여러 프로젝트를 수행하였으나 클라이언트 회사들이 서비스를 중지하거나, \n잠깐 진행되는 이벤트성 사이트, 자사에서 개발하던 서비스인 경우가 다수 있습니다. \n프로젝트의 정확한 이름이 아닌 클라이언트 회사로 지칭하여 프로젝트를 내려준 경우도 많아\n포트폴리오에 싣기 어려운 프로젝트들이 많은 점을 설명드립니다.\n\n참고할 수 있는 URL이 있는 경우 함께 기재하였습니다.`}
+          desc={`여러 프로젝트를 수행하였으나 클라이언트 회사들이 서비스를 중지하거나, \n잠깐 진행되는 이벤트성 사이트, 자사에서 개발하던 서비스인 경우가 다수 있어\n포트폴리오에 싣기 어려운 프로젝트들이 많은 점을 설명드립니다.\n참고할 수 있는 URL이 있는 경우 함께 기재하였습니다.\n\n대부분 퍼블리싱은 단독으로 100% 기여하였습니다.\n프론트 개발의 경우 API연결을 제외한 폼 관리, 상태관리, 라이브러리 활용 등에 기여하였습니다.`}
           skills={
             <>
               <Badge colorScheme="blue">npm</Badge>
@@ -118,7 +123,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               link: "https://www.leotechkor.com/pages/business/wfs/wfs.html",
               comments: [
                 "서비스 내용에 대해 참고할 수 있는 URL입니다.",
-                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발",
+                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발 서포트",
               ],
               skills: (
                 <>
@@ -130,7 +135,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "graduate",
               subject: "[SI] 2023.02 영산대학교 메타버스 졸업전시회",
-              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발"],
+              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발 서포트"],
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
@@ -141,7 +146,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "nft",
               subject: "[자사서비스] NFT거래소",
-              comments: ["CLIENT WEB 퍼블리싱 및 프론트개발"],
+              comments: ["CLIENT WEB 퍼블리싱 및 프론트개발 서포트"],
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
@@ -155,7 +160,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               link: "https://www.upchain.kr/service/hmps",
               comments: [
                 "서비스 내용에 대해 참고할 수 있는 URL입니다.",
-                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발",
+                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발 서포트",
               ],
               skills: (
                 <>
@@ -185,7 +190,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "solid",
               subject: "[SI] 솔리드 거래소",
-              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발"],
+              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발 서포트"],
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
@@ -233,13 +238,13 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "coldwallet",
               subject: "[자사서비스] 콜드월렛 개발",
-              comments: ["WINDOWS 응용프로그램 APP 프론트 개발"],
+              comments: ["WINDOWS 응용프로그램 APP 프론트 개발 서포트"],
               skills: <Badge colorScheme="blue">Flutter</Badge>,
             },
             {
               prjKey: "wizard",
               subject: "[SI] 위자드랩 웨어러블 디바이스 관리사이트",
-              comments: ["ADMIN WEB 퍼블리싱 / 프론트 개발 서포트"],
+              comments: ["ADMIN WEB 퍼블리싱 / 프론트 개발 서포트 "],
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
@@ -250,7 +255,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "eum",
               subject: "[자사서비스] EUM(블록체인 안전결제)",
-              comments: ["APP 퍼블리싱/프론트 서포트"],
+              comments: ["APP 퍼블리싱 / 프론트 개발 서포트"],
               skills: (
                 <>
                   <Badge colorScheme="blue">React Native</Badge>
@@ -311,7 +316,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             },
           ]}
         />
-        <ProjectCard
+        {/* <ProjectCard
           prjKey="jt"
           company="스튜디오제이티"
           subject="디자인 작업물"
@@ -325,13 +330,13 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           }
         >
           <Gallery photos={designs} onClick={openViewerModal} />;
-        </ProjectCard>
+        </ProjectCard> */}
         <ProjectCard
           prjKey="onedesign"
           company="원디자인"
           subject="디자인 + 퍼블리싱 작업물"
           date="2017.01 ~ 2019.07"
-          desc={`쇼핑몰 템플릿 업체에서 작업했던 디자인 + 퍼블리싱 결과물들 중 몇 가지입니다.\n작업물들은 근무했던 각 업체 및 적용사이트에 소유권/저작권이 있습니다.`}
+          desc={`쇼핑몰 템플릿 업체에서 작업했던 디자인 + 퍼블리싱 결과물들 중 몇 가지입니다.\nPC/모바일 버전이 있고 카페24/메이크샵 솔루션에 맞게 각각 제작하였습니다.\n작업물들은 근무했던 각 업체 및 적용사이트에 소유권/저작권이 있습니다.`}
           templates={[
             {
               prjKey: "august",
@@ -339,7 +344,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               date: "2018.08",
               link: "https://ecudemo102131.cafe24.com/",
               subject: "[쇼핑몰템플릿] 어거스트",
-              desc: "'어거스트' 디자인은 판매 사이트(카페24디자인센터: https://d.cafe24.com/home/)에서 여러 번 1등을 한 적이 있고, 2018년 8월 등록 후 1년이 넘도록 상위권을 유지했던 템플릿 디자인으로 당시 회사에서 제작되어 왔던 템플릿 중 가장 많이 판매되어 회사에 기여도가 컸던 템플릿입니다.",
+              desc: "'어거스트' 디자인은 업계에서 여러 번 판매 1위를 달성하였고, 2018년 8월 등록 후 1년이 넘도록 상위권을 유지했던 템플릿 디자인으로 당시 회사에서 제작되어 왔던 템플릿 중 가장 많이 판매되어 회사에 기여도가 컸던 템플릿입니다.",
             },
             {
               prjKey: "pure",
@@ -355,34 +360,34 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               subject: "[쇼핑몰템플릿] 하논",
               link: "https://ecudemo110146.cafe24.com/",
             },
+            // {
+            //   prjKey: "goodup",
+            //   imgUrl: prjGoodup,
+            //   date: "2018.09",
+            //   subject: "[쇼핑몰템플릿] 굳업",
+            //   link: "https://ecudemo105375.cafe24.com/",
+            // },
             {
-              prjKey: "hanonn",
-              imgUrl: prjGoodup,
-              date: "2018.09",
-              subject: "[쇼핑몰템플릿] 굳업",
-              link: "https://ecudemo105375.cafe24.com/",
-            },
-            {
-              prjKey: "hanonn",
+              prjKey: "solla",
               imgUrl: prjSolla,
               date: "2018.06 ~ 2018.07",
               subject: "[쇼핑몰템플릿] 솔라",
               link: "https://ecudemo92389.cafe24.com/",
             },
-            {
-              prjKey: "hanonn",
-              imgUrl: prjBlue,
-              date: "2017.11 ~ 2018.01",
-              subject: "[쇼핑몰템플릿] 블루",
-              link: "https://ecudemo82341.cafe24.com/",
-            },
-            {
-              prjKey: "hanonn",
-              imgUrl: prjHershey,
-              date: "2017.08 ~ 2017.10",
-              subject: "[쇼핑몰템플릿] 허쉬",
-              link: "https://ecudemo81494.cafe24.com/",
-            },
+            // {
+            //   prjKey: "blue",
+            //   imgUrl: prjBlue,
+            //   date: "2017.11 ~ 2018.01",
+            //   subject: "[쇼핑몰템플릿] 블루",
+            //   link: "https://ecudemo82341.cafe24.com/",
+            // },
+            // {
+            //   prjKey: "hershey",
+            //   imgUrl: prjHershey,
+            //   date: "2017.08 ~ 2017.10",
+            //   subject: "[쇼핑몰템플릿] 허쉬",
+            //   link: "https://ecudemo81494.cafe24.com/",
+            // },
           ]}
           skills={
             <>

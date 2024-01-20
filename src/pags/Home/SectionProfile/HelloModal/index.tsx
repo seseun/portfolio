@@ -31,7 +31,7 @@ function HelloModal({ isOpen, onClose }: ModalProps) {
               <Badge colorScheme="blue">React</Badge>
               <Badge colorScheme="blue">TypeScript</Badge>
               <Badge colorScheme="blue">chakra-ui</Badge>
-              <Badge colorScheme="blue">gsap</Badge>
+              <Badge colorScheme="blue">gsap/react</Badge>
               <Badge colorScheme="blue">yarn</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>

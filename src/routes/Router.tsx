@@ -5,7 +5,7 @@ import AppLayout from "./AppLayout";
 
 function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<Home />} />

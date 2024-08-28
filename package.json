@@ -1,6 +1,6 @@
 {
-  "name": "tsprj",
-  "homepage": "https://seseun.site",
+  "name": "portfolio",
+  "homepage": "https://seseun.github.io/portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

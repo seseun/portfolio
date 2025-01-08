@@ -12,27 +12,29 @@ const Section = forwardRef<HTMLDivElement, SectionProps & StackProps>(
         align="stretch"
         spacing={12}
         pt={16}
-        borderTopColor="gray.700"
+        borderTopColor="gray.800"
         borderTopWidth="1px"
         ref={ref}
         sx={{
           h2: {
-            fontSize: "3xl",
+            fontSize: "2xl",
+            color: "gray.100",
             small: {
               fontSize: "lg",
               fontWeight: 600,
               pl: 3,
-              color: "gray.600",
+              color: "gray.500",
             },
           },
           h3: {
-            fontSize: "2xl",
+            fontSize: "xl",
             lineHeight: "tall",
+            color: "gray.200",
             small: {
               fontSize: "lg",
               fontWeight: 600,
               pl: 3,
-              color: "gray.600",
+              color: "gray.500",
             },
           },
         }}

@@ -28,7 +28,7 @@ const theme = extendTheme({
       ul: {
         listStyle: "none",
       },
-      p: { color: "gray.400", fontSize: "lg", lineHeight: "tall" },
+      p: { color: "gray.400", fontSize: "md", lineHeight: "tall" },
     }),
   },
   fonts: {

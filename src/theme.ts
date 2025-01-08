@@ -1,4 +1,10 @@
-import { ColorMode, extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import {
+  ColorMode,
+  extendTheme,
+  type ThemeConfig,
+  StyleFunctionProps,
+} from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -17,7 +23,7 @@ const theme = extendTheme({
         fontSize: "16px",
       },
       body: {
-        bg: props.colorMode === "dark" ? "gray.800" : "white",
+        bg: props.colorMode === "dark" ? "gray.950" : "gray.100",
       },
       ul: {
         listStyle: "none",
@@ -29,7 +35,21 @@ const theme = extendTheme({
     heading: `'Pretendard Variable', sans-serif`,
     body: `'Pretendard Variable', sans-serif`,
   },
-  colors: {},
+  colors: {
+    gray: {
+      50: "#fafafa",
+      100: "#f4f4f5",
+      200: "#e4e4e7",
+      300: "#d4d4d8",
+      400: "#a1a1aa",
+      500: "#71717a",
+      600: "#52525b",
+      700: "#3f3f46",
+      800: "#27272a",
+      900: "#18181b",
+      950: "#111111",
+    },
+  },
   layerStyles: {
     main: {
       color: "gray.300",
@@ -87,8 +107,8 @@ const theme = extendTheme({
       baseStyle: {
         px: 1.5,
         py: 0.5,
-        borderRadius: "md",
-        fontSize: "sm",
+        borderRadius: "sm",
+        fontSize: "xs",
         fontWeight: "600",
         textTransform: "none",
         lineHeight: "short",
@@ -111,11 +131,14 @@ const theme = extendTheme({
       },
     },
     Modal: {
-      baseStyle: {
+      baseStyle: (props: StyleFunctionProps) => ({
         dialogContainer: {
           outline: "none !important",
         },
-      },
+        dialog: {
+          bgColor: mode("white", "gray.900")(props),
+        },
+      }),
     },
   },
 });

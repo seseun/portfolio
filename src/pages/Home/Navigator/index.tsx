@@ -40,7 +40,7 @@ function Navigator<T extends Record<string, unknown>>({
       w={12}
       zIndex={99}
     >
-      <NavButton emoji="🙇‍♀️" onClick={() => scrollToTop()} />
+      <NavButton emoji="🫡" onClick={() => scrollToTop()} />
       <NavButton
         emoji="🎢"
         text="경력"

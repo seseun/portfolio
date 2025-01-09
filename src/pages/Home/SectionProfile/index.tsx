@@ -69,7 +69,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
         text1Ref.current,
         { text: "　" },
         {
-          text: "안녕하세요, 이승은입니다🙇‍♀️",
+          text: "안녕하세요, 이승은입니다🫡",
           duration: 0.75,
         },
       )
@@ -110,7 +110,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
             size="320px"
             ref={imageRef}
           >
-            {/* <Image src={profile} w="320px" /> */}
+            <Image src={profile} w="320px" />
           </Circle>
         </Tooltip>
         <VStack align="stretch" spacing={6}>

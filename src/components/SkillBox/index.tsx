@@ -24,7 +24,7 @@ function SkillBox({
       {...props}
     >
       {!noBg && <Text as="span">👾</Text>}
-      <Flex gap={1} justifyContent={align} w="full" wrap="wrap">
+      <Flex py={0.5} gap={1} justifyContent={align} w="full" wrap="wrap">
         {children}
       </Flex>
     </Box>

@@ -10,8 +10,10 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <Box as="li" mt={8}>
       <Text as="i">📌</Text>
-      <Box as="div">
-        <Text as="strong">{project.subject}</Text>
+      <Box>
+        <Text as="strong" display="block" mb={1}>
+          {project.subject}
+        </Text>
         {project.link && (
           <Text
             as="p"

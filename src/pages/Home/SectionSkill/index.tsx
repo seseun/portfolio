@@ -48,6 +48,7 @@ const SectionSkill = forwardRef<HTMLDivElement>((props, ref) => {
             <Badge colorScheme="blue">Tailwind</Badge>
             <Badge colorScheme="blue">React-bootstrap</Badge>
             <Badge colorScheme="blue">Gsap</Badge>
+            <Badge colorScheme="blue">React-gsap</Badge>
             <Badge colorScheme="blue">React-query</Badge>
             <Badge colorScheme="blue">React-hook-form</Badge>
             <Badge colorScheme="blue" variant="outline">
@@ -84,6 +85,7 @@ const SectionSkill = forwardRef<HTMLDivElement>((props, ref) => {
         <SkillListItem category="도구/툴">
           <SkillBadgeList>
             <Badge colorScheme="green">GitHub</Badge>
+            <Badge colorScheme="green">GitLab</Badge>
             <Badge colorScheme="green">VSCode</Badge>
             <Badge colorScheme="green">SourceTree</Badge>
             <Badge colorScheme="green">Swagger</Badge>

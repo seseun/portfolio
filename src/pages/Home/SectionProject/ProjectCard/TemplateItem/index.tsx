@@ -1,4 +1,5 @@
-import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
+import { MockupFigure } from "components";
 import TemplateProps from "type/TemplateProps";
 
 interface TemplateItemProps {
@@ -12,24 +13,19 @@ function TemplateItem({ template }: TemplateItemProps) {
       display="flex"
       sx={{
         _notFirst: {
+          alignItems: "flex-start",
           flex: "32% 1 1",
           flexDirection: "column",
-          alignItems: "flex-start",
-          figure: {
-            w: "100%",
-            h: "360px",
-          },
           ul: {
             mt: 5,
           },
         },
         _first: {
-          flexDirection: "row",
           alignItems: "flex-end",
+          flexDirection: "row",
           figure: {
-            w: "640px",
             flex: "640px 0 0",
-            h: "360px",
+            w: "640px",
           },
           ul: {
             ml: 5,
@@ -37,32 +33,11 @@ function TemplateItem({ template }: TemplateItemProps) {
         },
       }}
     >
-      {template.imgUrl && (
-        <Box
-          as="figure"
-          overflow="auto"
-          borderWidth="1rem"
-          borderRadius="lg"
-          borderColor="gray.700"
-          sx={{
-            "::-webkit-scrollbar": {
-              width: "8px",
-            },
-            "::-webkit-scrollbar-thumb": {
-              bg: "gray.600",
-            },
-            "::-webkit-scrollbar-track": {
-              bg: "gray.800",
-            },
-          }}
-        >
-          <Image src={template.imgUrl} />
-        </Box>
-      )}
+      {template.imgUrl && <MockupFigure imgUrl={template.imgUrl} />}
 
       <Box as="ul" layerStyle="iconList">
         <Box as="li">
-          <Text as="strong" color="gray.400" fontSize="1.25rem !important">
+          <Text as="strong" color="gray.400">
             {template.subject}
           </Text>
         </Box>
@@ -73,7 +48,7 @@ function TemplateItem({ template }: TemplateItemProps) {
           </Box>
         )}
         {template.link && (
-          <Box as="li" mt={1}>
+          <Box as="li">
             <Text as="i">🔗</Text>
             <Button as="a" target="_blank" variant="link" href={template.link}>
               {template.link}

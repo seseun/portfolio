@@ -76,27 +76,32 @@ const theme = extendTheme({
     },
     iconList: {
       li: {
-        listStyle: "none",
-        lineHeight: "tall",
-        display: "flex",
         alginItems: "flex-start",
+        display: "flex",
+        lineHeight: "short",
+        listStyle: "none",
         w: "100%",
         i: {
-          pr: 2,
-          fontStyle: "initial",
           flexShrink: 0,
+          fontSize: "sm",
+          fontStyle: "initial",
+          pr: 1,
           "& + *:not(a)": {
             flex: 1,
           },
         },
         strong: {
-          fontSize: "lg",
+          fontSize: "md",
           color: "gray.400",
           fontWeight: 600,
         },
+        a: {
+          fontSize: "sm",
+        },
         p: {
-          color: "gray.500",
-          fontSize: "md",
+          color: "gray.400",
+          fontSize: "sm",
+          lineHeight: "short",
         },
       },
     },
@@ -106,12 +111,12 @@ const theme = extendTheme({
     Badge: {
       baseStyle: {
         px: 1.5,
-        py: 0.5,
+        h: 5,
+        lineHeight: 5,
         borderRadius: "sm",
         fontSize: "xs",
         fontWeight: "600",
         textTransform: "none",
-        lineHeight: "short",
       },
     },
     Button: {
@@ -119,9 +124,9 @@ const theme = extendTheme({
       sizes: {},
       variants: {
         link: {
-          color: "yellow.600",
+          color: "blue.400",
           textDecoration: "underline",
-          fontWeight: 500,
+          fontWeight: 400,
         },
       },
       defaultProps: {

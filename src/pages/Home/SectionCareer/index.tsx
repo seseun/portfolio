@@ -27,7 +27,7 @@ const SectionCareer = forwardRef<HTMLDivElement>((props, ref) => {
             <Badge colorScheme="gray">카페24</Badge>,
             <Badge colorScheme="gray">메이크샵</Badge>) 환경에 맞게 코딩(
             <Badge colorScheme="purple">HTML5</Badge>,
-            <Badge colorScheme="purple">CSS 3</Badge>,
+            <Badge colorScheme="purple">CSS3</Badge>,
             <Badge colorScheme="purple">JQuery</Badge>)을 진행하였습니다.
             <br />
             당시 단독제작한 템플릿으로 여러 차례 업계 1위 및 상위권을 유지하여
@@ -48,15 +48,14 @@ const SectionCareer = forwardRef<HTMLDivElement>((props, ref) => {
             현재는 프론트개발자로 일하고 있습니다.
             <br />
             <Text as="span" color="gray.600">
-              ㅡ여전히 퍼블리싱도 함께 합니다. 퍼블리싱이 프론트의 개념 안에
+              ㅡ여전히 퍼블리싱도 함께 합니다. 퍼블리싱이 프론트개발의 범위 안에
               있다고 생각합니다.ㅡ
             </Text>
             <br />
             <br />
             현재 근무하고 있는 회사에서{" "}
-            <Badge colorScheme="blue">Next.js</Badge>와 함께&nbsp;
-            <Badge colorScheme="blue">TypeScript</Badge>,
-            <Badge colorScheme="blue">react-query</Badge> 등의 스택으로 경험을
+            <Badge colorScheme="blue">Next.js</Badge>,
+            <Badge colorScheme="blue">TypeScript</Badge> 등의 스택으로 경험을
             쌓고 있습니다.
           </Text>
         </CareerPara>

@@ -182,7 +182,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
                 <>
                   <Badge colorScheme="blue">Jsp</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">JQuery</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                 </>
@@ -209,7 +209,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
                   <Badge colorScheme="blue">Vue</Badge>
                   <Badge colorScheme="blue">Angular</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                   <Badge colorScheme="green">IntelliJ IDEA</Badge>
                 </>
@@ -230,7 +230,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
                   <Badge colorScheme="blue">Vue</Badge>
                   <Badge colorScheme="blue">Angular</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                   <Badge colorScheme="green">IntelliJ IDEA</Badge>
                 </>
@@ -309,7 +309,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
                 <>
                   <Badge colorScheme="blue">Jsp</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                   <Badge colorScheme="green">IntelliJ IDEA</Badge>
                 </>
@@ -393,7 +393,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           skills={
             <>
               <Badge colorScheme="purple">HTML5</Badge>
-              <Badge colorScheme="purple">CSS 3</Badge>
+              <Badge colorScheme="purple">CSS3</Badge>
               <Badge colorScheme="purple">JQuery</Badge>
               <Badge colorScheme="red">Adobe Photoshop</Badge>
               <Badge colorScheme="red">Adobe Illustrator</Badge>

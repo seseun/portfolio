@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  HStack,
-  Heading,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 import { MockupFigure, SkillBox } from "components";

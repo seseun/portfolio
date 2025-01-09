@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Circle,
   Flex,
   HStack,
@@ -140,6 +141,12 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
               },
             }}
           >
+            <Flex align="center" gap={2}>
+              <Text as="span">👾</Text>
+              <Button as="a" variant="link" href="https://github.com/seseun">
+                https://github.com/seseun
+              </Button>
+            </Flex>
             <Flex align="center" gap={2}>
               <Text as="span">🤙</Text>
               <Text>+82 10-5492-1581</Text>

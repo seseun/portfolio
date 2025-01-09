@@ -10,7 +10,7 @@ const SectionSkill = forwardRef<HTMLDivElement>((props, ref) => {
     <Section ref={ref} {...props}>
       <Flex justify="space-between" align="flex-end">
         <Heading as="h2">
-          👾 기술스택<Text as="small">우측 배지를 참고해주세요.</Text>
+          🛠️ 기술스택<Text as="small">우측 배지를 참고해주세요.</Text>
         </Heading>
         <Flex gap={2}>
           <Badge>자주 사용했습니다</Badge>

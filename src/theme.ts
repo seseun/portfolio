@@ -141,7 +141,7 @@ const theme = extendTheme({
           outline: "none !important",
         },
         dialog: {
-          bgColor: mode("white", "gray.900")(props),
+          bgColor: mode("white", "gray.800")(props),
         },
       }),
     },

@@ -23,7 +23,7 @@ function SkillBox({
       width="100%"
       {...props}
     >
-      {!noBg && <Text as="span">👾</Text>}
+      {!noBg && <Text as="span">🛠️</Text>}
       <Flex py={0.5} gap={1} justifyContent={align} w="full" wrap="wrap">
         {children}
       </Flex>

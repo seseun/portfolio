@@ -43,13 +43,13 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           prjKey="kimplabs"
           company="아브코"
           subject="김프랩스"
-          date="2024.06 ~"
+          date="2024.05 ~"
           desc={`아비트리지 투자자들을 위한 김프 등의 트레이딩 정보를 제공하는 웹입니다.`}
           imgUrl={prjKimplabs}
           link="https://kimplabs.com/"
           comments={[
             "Next.js, TypeScript를 사용하여 WEB을 구현했습니다.",
-            "웹소캣을 사용했습니다.",
+            "웹소캣을 사용합니다.",
             "프론트개발 단독진행하였습니다.",
           ]}
           skills={
@@ -72,13 +72,13 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           prjKey="avco-homepage"
           company="아브코"
           subject="자사 홈페이지 리뉴얼"
-          date="2024.05"
+          date="2024.04"
           desc={`자사 홈페이지를 React 웹으로 리뉴얼하였습니다.`}
           imgUrl={prjAvco}
           link="https://avco.kr/"
           comments={[
             "React, TypeScript를 사용하여 WEB을 구현했습니다.",
-            "react-gsap을 이용했습니다.",
+            "React-gsap을 이용했습니다.",
             "프론트개발 단독진행하였습니다.",
           ]}
           skills={
@@ -90,11 +90,12 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">React-query</Badge>
               <Badge colorScheme="blue">Gsap</Badge>
               <Badge colorScheme="blue">React-gsap</Badge>
+              <Badge colorScheme="blue">axios</Badge>
+              <Badge colorScheme="blue">Wordpress</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>
               <Badge colorScheme="green">Swagger</Badge>
-              <Badge colorScheme="green">Postman</Badge>
             </>
           }
         />
@@ -102,7 +103,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           prjKey="gapcha"
           company="아브코"
           subject="갭챠"
-          date="2024.01 ~ 2024.04"
+          date="2024.02 ~ 2024.04"
           desc={`자사의 아비트리지를 이용한 트레이딩 봇을 이용하는 고객을 위한 클라이언트 웹입니다.`}
           imgUrl={prjGapcha}
           link="https://sales.gapcha.com/main"
@@ -118,6 +119,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">React-hook-form</Badge>
               <Badge colorScheme="blue">React-query</Badge>
               <Badge colorScheme="blue">Zustand</Badge>
+              <Badge colorScheme="blue">axios</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>
@@ -146,6 +148,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">React-hook-form</Badge>
               <Badge colorScheme="blue">React-query</Badge>
               <Badge colorScheme="blue">React-redux</Badge>
+              <Badge colorScheme="blue">axios</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>

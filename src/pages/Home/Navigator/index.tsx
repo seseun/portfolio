@@ -47,7 +47,7 @@ function Navigator<T extends Record<string, unknown>>({
         onClick={() => scrollToSection("career")}
       />
       <NavButton
-        emoji="👾"
+        emoji="🛠️"
         text="기술스택"
         onClick={() => scrollToSection("skill")}
       />

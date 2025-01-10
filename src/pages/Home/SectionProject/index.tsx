@@ -56,15 +56,16 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             <>
               <Badge colorScheme="blue">Next.js</Badge>
               <Badge colorScheme="blue">TypeScript</Badge>
+              <Badge colorScheme="blue">Websocket</Badge>
               <Badge colorScheme="blue">Chakra-ui</Badge>
               <Badge colorScheme="blue">React-hook-form</Badge>
               <Badge colorScheme="blue">React-query</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
               <Badge colorScheme="blue">Zustand</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>
               <Badge colorScheme="green">Swagger</Badge>
-              <Badge colorScheme="green">Postman</Badge>
             </>
           }
         />
@@ -90,7 +91,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">React-query</Badge>
               <Badge colorScheme="blue">Gsap</Badge>
               <Badge colorScheme="blue">React-gsap</Badge>
-              <Badge colorScheme="blue">axios</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
               <Badge colorScheme="blue">Wordpress</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
@@ -119,7 +120,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">React-hook-form</Badge>
               <Badge colorScheme="blue">React-query</Badge>
               <Badge colorScheme="blue">Zustand</Badge>
-              <Badge colorScheme="blue">axios</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>
@@ -148,7 +149,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="blue">React-hook-form</Badge>
               <Badge colorScheme="blue">React-query</Badge>
               <Badge colorScheme="blue">React-redux</Badge>
-              <Badge colorScheme="blue">axios</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>
@@ -182,7 +183,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="purple">SCSS</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="red">Adobe Illustrator</Badge>
-              <Badge colorScheme="green">Git</Badge>
+              <Badge colorScheme="green">GitLab</Badge>
               <Badge colorScheme="green">SourceTree</Badge>
               <Badge colorScheme="green">Visual Studio Code</Badge>
             </>

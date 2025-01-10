@@ -58,22 +58,6 @@ const theme = extendTheme({
       p: 20,
       width: "1280px",
     },
-    footer: {
-      bgColor: "gray.700",
-      bottom: 0,
-      color: "gray.500",
-      left: 0,
-      position: "fixed",
-      px: 4,
-      py: 0.5,
-      textAlign: "right",
-      width: "100%",
-      p: {
-        fontSize: "sm",
-        width: "1120px",
-        m: "0 auto",
-      },
-    },
     iconList: {
       li: {
         alginItems: "flex-start",

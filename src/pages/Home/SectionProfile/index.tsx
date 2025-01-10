@@ -7,7 +7,6 @@ import {
   Heading,
   Image,
   Text,
-  Tooltip,
   VStack,
 } from "@chakra-ui/react";
 import { useGSAP } from "@gsap/react";
@@ -37,15 +36,15 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
   useGSAP(
     () => {
       gsap.set(containerRef.current, {
-        x: -32,
+        y: 16,
         opacity: 0,
       });
       gsap.set(imageRef.current, {
-        x: -32,
+        y: 16,
         opacity: 0,
       });
       gsap.set(contactRef.current, {
-        x: -32,
+        y: 16,
         opacity: 0,
       });
     },
@@ -57,12 +56,12 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
       .timeline()
       .delay(0.5)
       .to(containerRef.current, {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.4,
       })
       .to(imageRef.current, {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.4,
       })
@@ -91,7 +90,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
         },
       )
       .to(contactRef.current, {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.4,
       });
@@ -99,21 +98,15 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <Section id="profile" borderTop={0} pt={0} ref={ref} {...props}>
       <HStack spacing={12} alignItems="flex-end" ref={containerRef}>
-        <Tooltip
-          label="사람좋은 사진으로 골라봤습니다... ^___^"
-          bg="gray.900"
-          color="gray.500"
+        <Circle
+          // bgColor="gray.800"
+          flexShrink={0}
+          overflow="hidden"
+          size="400px"
+          ref={imageRef}
         >
-          <Circle
-            bgColor="gray.800"
-            flexShrink={0}
-            overflow="hidden"
-            size="320px"
-            ref={imageRef}
-          >
-            <Image src={profile} w="320px" />
-          </Circle>
-        </Tooltip>
+          <Image src={profile} />
+        </Circle>
         <VStack align="stretch" spacing={6}>
           <Heading
             as="h1"
@@ -141,23 +134,28 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
               },
             }}
           >
-            <Flex align="center" gap={2}>
-              <Text as="span">👾</Text>
-              <Button as="a" variant="link" href="https://github.com/seseun">
-                https://github.com/seseun
-              </Button>
-            </Flex>
-            <Flex align="center" gap={2}>
+            <Flex align="center" gap={3}>
               <Text as="span">🤙</Text>
               <Text>+82 10-5492-1581</Text>
             </Flex>
-            <Flex align="center" gap={2}>
+            <Flex align="center" gap={3}>
+              <Text as="span">📍</Text>
+              <Text>부산진구</Text>
+            </Flex>
+            <Flex align="center" gap={3}>
               <Text as="span">📨</Text>
               <Text>dev.seseun@gmail.com</Text>
             </Flex>
-            <Flex align="center" gap={2}>
-              <Text as="span">📍</Text>
-              <Text>부산진구</Text>
+            <Flex align="center" gap={3}>
+              <Text as="span">👾</Text>
+              <Button
+                as="a"
+                variant="link"
+                fontSize="sm"
+                href="https://github.com/seseun"
+              >
+                https://github.com/seseun
+              </Button>
             </Flex>
           </VStack>
         </VStack>

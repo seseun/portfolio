@@ -2,6 +2,7 @@ import { Badge, Heading, Text, VStack } from "@chakra-ui/react";
 
 import { Section } from "components";
 import { forwardRef } from "react";
+
 import CareerPara from "./CareerPara";
 import CareerTimeline from "./CareerTimeline";
 

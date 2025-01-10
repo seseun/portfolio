@@ -97,7 +97,7 @@ const SectionProfile = forwardRef<HTMLDivElement>((props, ref) => {
   });
   return (
     <Section id="profile" borderTop={0} pt={0} ref={ref} {...props}>
-      <HStack spacing={12} alignItems="flex-end" ref={containerRef}>
+      <HStack spacing={10} alignItems="center" ref={containerRef}>
         <Circle
           // bgColor="gray.800"
           flexShrink={0}

@@ -27,9 +27,9 @@ function Navigator<T extends Record<string, unknown>>({
 
   return (
     <Flex
-      as="aside"
       align="center"
-      bgColor="gray.900"
+      as="aside"
+      bgColor="rgba(0,0,0,0.4)"
       borderRadius="lg"
       bottom={10}
       direction="column"
@@ -37,7 +37,7 @@ function Navigator<T extends Record<string, unknown>>({
       left={4}
       position="fixed"
       py={2}
-      w={12}
+      w={10}
       zIndex={99}
     >
       <NavButton emoji="🫡" onClick={() => scrollToTop()} />
@@ -47,7 +47,7 @@ function Navigator<T extends Record<string, unknown>>({
         onClick={() => scrollToSection("career")}
       />
       <NavButton
-        emoji="👾"
+        emoji="🛠️"
         text="기술스택"
         onClick={() => scrollToSection("skill")}
       />

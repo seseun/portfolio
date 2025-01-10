@@ -31,7 +31,7 @@ function Home() {
         "section:not(:first-of-type)",
       );
       gsap.set(sections, {
-        x: -32,
+        y: 16,
         opacity: 0,
       });
       sections.forEach((section) => {
@@ -40,7 +40,7 @@ function Home() {
           start: "top center",
           end: "bottom center",
           animation: gsap.to(section, {
-            x: 0,
+            y: 0,
             opacity: 1,
           }),
         });

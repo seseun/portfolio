@@ -7,6 +7,11 @@ import { Section } from "components";
 import ProjectCard from "./ProjectCard";
 import ViewerModal from "./ViewerModal";
 
+import prjKimplabs from "assets/images/prj_kimplabs.jpg";
+import prjAvco from "assets/images/prj_avco.jpg";
+import prjGapcha from "assets/images/prj_gapcha.jpg";
+import prjUpchain from "assets/images/prj_upchain.jpg";
+
 import prjAugust from "assets/images/prj_august.jpg";
 import prjBlue from "assets/images/prj_blue.jpg";
 import prjGoodup from "assets/images/prj_goodup.jpg";
@@ -14,7 +19,6 @@ import prjHanonn from "assets/images/prj_hanonn.jpg";
 import prjHershey from "assets/images/prj_hershey.jpg";
 import prjPure from "assets/images/prj_pure_organic.jpg";
 import prjSolla from "assets/images/prj_solla.jpg";
-import prjUpchain from "assets/images/prj_upchain.jpg";
 
 import des19112 from "assets/images/design_1911_2.jpg";
 import des19113 from "assets/images/design_1911_3.jpg";
@@ -33,30 +37,120 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
   };
   return (
     <Section ref={ref} {...props}>
-      <Heading as="h2">🚀 수행했던 프로젝트들이에요.</Heading>
+      <Heading as="h2">🚀 프로젝트</Heading>
       <VStack align="stretch" spacing={5}>
         <ProjectCard
-          prjKey="mobytalk"
-          company="모비텍"
-          subject="모비톡"
-          date="2023.10 ~"
-          desc={`현재 제가 속한 회사에서는 공공기관을 대상으로 하는 문자 발송 시스템 서비스를 개발 중입니다.\n제가 최근에 어떤 기술을 사용하고 있는지를 보여드리기 위해 이 프로젝트를 포트폴리오에 추가했습니다.`}
+          prjKey="kimplabs"
+          company="아브코"
+          subject="김프랩스"
+          date="2024.05 ~"
+          desc={`아비트리지 투자자들을 위한 김프 등의 트레이딩 정보를 제공하는 웹입니다.`}
+          imgUrl={prjKimplabs}
+          link="https://kimplabs.com/"
           comments={[
-            "React, TypeScript를 사용하여 클라이언트들이 사용할 WEB을 구현하고 있습니다.",
-            "JWT를 이용한 로그인/로그아웃 기능을 맡아 구현하였습니다. Redux와 브라우저 쿠키를 사용했습니다.",
-            "관리자 및 부서 관리 파트 등에서 react-query를 이용해 CRUD 기능을 구현하였습니다.",
-            "폼 관련하여 react-hook-form 라이브러리를 이용하고 있습니다.",
-            "react/chakra-ui를 이용해 레이아웃을 구현하고 있습니다.",
+            "Next.js, TypeScript를 사용하여 WEB을 구현했습니다.",
+            "웹소캣을 사용합니다.",
+            "프론트개발 단독진행하였습니다.",
+          ]}
+          skills={
+            <>
+              <Badge colorScheme="blue">Next.js</Badge>
+              <Badge colorScheme="blue">TypeScript</Badge>
+              <Badge colorScheme="blue">Websocket</Badge>
+              <Badge colorScheme="blue">Chakra-ui</Badge>
+              <Badge colorScheme="blue">React-hook-form</Badge>
+              <Badge colorScheme="blue">React-query</Badge>
+              <Badge colorScheme="blue">react-virtualized</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
+              <Badge colorScheme="blue">Zustand</Badge>
+              <Badge colorScheme="red">Figma</Badge>
+              <Badge colorScheme="green">GitHub</Badge>
+              <Badge colorScheme="green">VSCode</Badge>
+              <Badge colorScheme="green">Swagger</Badge>
+            </>
+          }
+        />
+        <ProjectCard
+          prjKey="avco-homepage"
+          company="아브코"
+          subject="자사 홈페이지 리뉴얼"
+          date="2024.04"
+          desc={`자사 홈페이지를 React 웹으로 리뉴얼하였습니다.`}
+          imgUrl={prjAvco}
+          link="https://avco.kr/"
+          comments={[
+            "React, TypeScript를 사용하여 WEB을 구현했습니다.",
+            "React-gsap을 이용했습니다.",
+            "퍼블리싱/프론트개발 단독진행하였습니다.",
           ]}
           skills={
             <>
               <Badge colorScheme="blue">React</Badge>
               <Badge colorScheme="blue">TypeScript</Badge>
-              <Badge colorScheme="blue">chakra-ui</Badge>
-              <Badge colorScheme="blue">react-hook-form</Badge>
-              <Badge colorScheme="blue">react-query</Badge>
-              <Badge colorScheme="blue">react-redux</Badge>
-              <Badge colorScheme="blue">yarn</Badge>
+              <Badge colorScheme="blue">Chakra-ui</Badge>
+              <Badge colorScheme="blue">React-hook-form</Badge>
+              <Badge colorScheme="blue">Gsap</Badge>
+              <Badge colorScheme="blue">React-gsap</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
+              <Badge colorScheme="blue">Wordpress</Badge>
+              <Badge colorScheme="red">Figma</Badge>
+              <Badge colorScheme="green">GitHub</Badge>
+              <Badge colorScheme="green">VSCode</Badge>
+              <Badge colorScheme="green">Swagger</Badge>
+            </>
+          }
+        />
+        <ProjectCard
+          prjKey="gapcha"
+          company="아브코"
+          subject="갭챠"
+          date="2024.02 ~ 2024.04"
+          desc={`자사의 아비트리지를 이용한 트레이딩 봇을 이용하는 고객을 위한 클라이언트 웹입니다.`}
+          imgUrl={prjGapcha}
+          // link="https://gapcha.com/main"
+          comments={[
+            "Next.js, TypeScript를 사용하여 WEB을 리뉴얼했습니다.",
+            "이용계정이 없으면 접근할 수 없어 링크를 기재하지 않았습니다.",
+            "퍼블리싱/프론트개발 단독진행하였습니다.",
+          ]}
+          skills={
+            <>
+              <Badge colorScheme="blue">Next.js</Badge>
+              <Badge colorScheme="blue">TypeScript</Badge>
+              <Badge colorScheme="blue">Tailwind</Badge>
+              <Badge colorScheme="blue">React-hook-form</Badge>
+              <Badge colorScheme="blue">React-query</Badge>
+              <Badge colorScheme="blue">Zustand</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
+              <Badge colorScheme="red">Figma</Badge>
+              <Badge colorScheme="green">GitHub</Badge>
+              <Badge colorScheme="green">VSCode</Badge>
+              <Badge colorScheme="green">Swagger</Badge>
+              <Badge colorScheme="green">Postman</Badge>
+            </>
+          }
+        />
+        <ProjectCard
+          prjKey="mobytalk"
+          company="모비텍"
+          subject="모비톡"
+          date="2023.10 ~ 2024.01"
+          desc={`문자, 알림 발송 시스템 서비스입니다.`}
+          link="https://www.mobytec.co.kr/html/business/mobytalk.html"
+          comments={[
+            "서비스 내용에 대해 참고할 수 있는 URL입니다.",
+            "React, TypeScript를 사용하여 클라이언트 WEB 구현에 참여하였습니다.",
+            "JWT를 이용한 로그인/로그아웃 기능, 관리자 설정 및 부서관리 파트를 맡아 구현했습니다.",
+          ]}
+          skills={
+            <>
+              <Badge colorScheme="blue">React</Badge>
+              <Badge colorScheme="blue">TypeScript</Badge>
+              <Badge colorScheme="blue">Chakra-ui</Badge>
+              <Badge colorScheme="blue">React-hook-form</Badge>
+              <Badge colorScheme="blue">React-query</Badge>
+              <Badge colorScheme="blue">React-redux</Badge>
+              <Badge colorScheme="blue">Axios</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="green">GitHub</Badge>
               <Badge colorScheme="green">VSCode</Badge>
@@ -70,27 +164,27 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           company="유피체인"
           subject="자사 홈페이지 리뉴얼"
           date="2021.11 ~ 2022.07"
-          desc={`자사 홈페이지를 React 웹으로 리뉴얼하였습니다.\n회사에서 진행하는 다른 프로젝트들과 병행하여 기간이 꽤 길었습니다.\n비록 완벽하진 않겠지만 혼자서 처음부터 끝까지 완성해낸 프로젝트라 완성 후 큰 만족감을 느꼈습니다.`}
+          desc={`자사 홈페이지를 React 웹으로 리뉴얼하였습니다.\n회사에서 진행하는 다른 프로젝트들과 병행하여 기간이 길었습니다.\n프론트를 처음부터 끝까지 해낸 첫 프로젝트입니다.`}
           imgUrl={prjUpchain}
           link="https://www.upchain.kr/"
           comments={[
             "PM으로 참여하여 전체 프로젝트를 관리하였습니다.",
-            "React를 이용한 반응형 퍼블리싱/개발 파트에서 배포 외 모든 부분을 단독 진행하였습니다.",
-            "gsap, svg 등을 이용하여 인터랙티브한 웹으로 구현하였습니다.",
+            "퍼블리싱/프론트개발 단독진행하였습니다.",
+            "gsap, svg 등을 이용했습니다.",
             "Google firebase를 이용한 Serverless web으로 작업하였습니다.\n사이트 내 ABOUT의 연혁, WORKS/NEWS의 리스트 및 내용에서 연결된 데이터는 모두 Google firebase의 Realtime Database에서 연결되었습니다.",
           ]}
           skills={
             <>
               <Badge colorScheme="blue">React</Badge>
-              <Badge colorScheme="blue">react-bootstrap</Badge>
-              <Badge colorScheme="blue">gsap</Badge>
-              <Badge colorScheme="blue">react-gsap</Badge>
+              <Badge colorScheme="blue">React-bootstrap</Badge>
+              <Badge colorScheme="blue">Gsap</Badge>
+              <Badge colorScheme="blue">React-gsap</Badge>
               <Badge colorScheme="blue">Google Firebase</Badge>
               <Badge colorScheme="blue">Firebase Realtime Database</Badge>
               <Badge colorScheme="purple">SCSS</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="red">Adobe Illustrator</Badge>
-              <Badge colorScheme="green">Git</Badge>
+              <Badge colorScheme="green">GitLab</Badge>
               <Badge colorScheme="green">SourceTree</Badge>
               <Badge colorScheme="green">Visual Studio Code</Badge>
             </>
@@ -101,49 +195,21 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           company="유피체인"
           subject="이외 프로젝트 수행이력"
           date="2020.08 ~ 2023.03"
-          desc={`여러 프로젝트를 수행하였으나 클라이언트 회사들이 서비스를 중지하거나, \n잠깐 진행되는 이벤트성 사이트, 자사에서 개발하던 서비스인 경우가 다수 있어\n포트폴리오에 싣기 어려운 프로젝트들이 많은 점을 설명드립니다.\n참고할 수 있는 URL이 있는 경우 함께 기재하였습니다.\n\n대부분 퍼블리싱은 단독으로 100% 기여하였습니다.\n프론트 개발의 경우 API연결을 제외한 폼 관리, 상태관리, 라이브러리 활용 등에 기여하였습니다.`}
+          desc={`여러 프로젝트를 수행하였으나\n서비스 중지, 이벤트성 사이트, 자사 개발서비스인 경우가 다수 있어\n포트폴리오에 싣기 어려운 프로젝트가 많은 점을 설명드립니다.\n참고할 수 있는 URL이 있는 경우 함께 기재하였습니다.\n\n대부분 퍼블리싱은 단독으로 100% 기여하였습니다.\n프론트 개발의 경우 API연결을 제외한 폼 관리, 상태관리, 라이브러리 활용 등에 기여하였습니다.`}
           skills={
             <>
-              <Badge colorScheme="blue">npm</Badge>
               <Badge colorScheme="purple">SCSS</Badge>
               <Badge colorScheme="red">Figma</Badge>
               <Badge colorScheme="red">Zeplin</Badge>
               <Badge colorScheme="red">Adobe Photoshop</Badge>
               <Badge colorScheme="red">Adobe Illustrator</Badge>
-              <Badge colorScheme="green">Git</Badge>
+              <Badge colorScheme="green">GitLab</Badge>
               <Badge colorScheme="green">SourceTree</Badge>
-              <Badge colorScheme="green">Visual Studio Code</Badge>
+              <Badge colorScheme="green">VS Code</Badge>
               <Badge colorScheme="green">Swagger</Badge>
-              <Badge colorScheme="green">Postman</Badge>
             </>
           }
           projects={[
-            {
-              prjKey: "wifree",
-              subject: "[SI] WIFREE 와이파이 연결 서비스",
-              link: "https://www.leotechkor.com/pages/business/wfs/wfs.html",
-              comments: [
-                "서비스 내용에 대해 참고할 수 있는 URL입니다.",
-                "CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발 서포트",
-              ],
-              skills: (
-                <>
-                  <Badge colorScheme="blue">React</Badge>
-                  <Badge colorScheme="purple">react-bootstrap</Badge>
-                </>
-              ),
-            },
-            {
-              prjKey: "graduate",
-              subject: "[SI] 2023.02 영산대학교 메타버스 졸업전시회",
-              comments: ["CLIENT, ADMIN WEB 퍼블리싱 및 프론트개발 서포트"],
-              skills: (
-                <>
-                  <Badge colorScheme="blue">React</Badge>
-                  <Badge colorScheme="purple">react-bootstrap</Badge>
-                </>
-              ),
-            },
             {
               prjKey: "nft",
               subject: "[자사서비스] NFT거래소",
@@ -151,7 +217,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
-                  <Badge colorScheme="purple">react-bootstrap</Badge>
+                  <Badge colorScheme="purple">React-bootstrap</Badge>
                 </>
               ),
             },
@@ -166,7 +232,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
-                  <Badge colorScheme="purple">react-bootstrap</Badge>
+                  <Badge colorScheme="purple">React-bootstrap</Badge>
                 </>
               ),
             },
@@ -180,9 +246,9 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ],
               skills: (
                 <>
-                  <Badge colorScheme="blue">Jsp</Badge>
+                  <Badge colorScheme="purple">Jsp</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">JQuery</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                 </>
@@ -195,7 +261,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
-                  <Badge colorScheme="purple">react-bootstrap</Badge>
+                  <Badge colorScheme="purple">React-bootstrap</Badge>
                 </>
               ),
             },
@@ -205,11 +271,11 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               comments: ["디자인 변경 반영 및 유지보수"],
               skills: (
                 <>
-                  <Badge colorScheme="blue">Jsp</Badge>
                   <Badge colorScheme="blue">Vue</Badge>
                   <Badge colorScheme="blue">Angular</Badge>
+                  <Badge colorScheme="purple">Jsp</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                   <Badge colorScheme="green">IntelliJ IDEA</Badge>
                 </>
@@ -218,19 +284,17 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "qbit",
               subject: "[SI] 큐비트 거래소",
-              link: "https://www.qbitexchange.io/signup/setAccount.do",
               comments: [
-                "실제 개발한 화면입니다.",
                 "AML 프로세스를 위한 회원가입 단계 분할 퍼블리싱 및 API 연결 서포트",
                 "WEB 퍼블리싱 관련 유지보수",
               ],
               skills: (
                 <>
-                  <Badge colorScheme="blue">Jsp</Badge>
                   <Badge colorScheme="blue">Vue</Badge>
                   <Badge colorScheme="blue">Angular</Badge>
+                  <Badge colorScheme="purple">Jsp</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                   <Badge colorScheme="green">IntelliJ IDEA</Badge>
                 </>
@@ -239,7 +303,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "coldwallet",
               subject: "[자사서비스] 콜드월렛 개발",
-              comments: ["WINDOWS 응용프로그램 APP 프론트 개발 서포트"],
+              comments: ["WINDOWS 응용프로그램 APP 프론트 개발"],
               skills: <Badge colorScheme="blue">Flutter</Badge>,
             },
             {
@@ -249,7 +313,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               skills: (
                 <>
                   <Badge colorScheme="blue">React</Badge>
-                  <Badge colorScheme="purple">react-bootstrap</Badge>
+                  <Badge colorScheme="purple">React-bootstrap</Badge>
                 </>
               ),
             },
@@ -270,7 +334,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               subject: "[SI] Eagles System",
               link: "https://play.google.com/store/apps/details?id=com.synergy.client&hl=ko&gl=US",
               comments: [
-                "서비스 내용에 대해 참고할 수 있는 URL입니다. 앱 화면을 구현하였습니다.",
+                "서비스 내용에 대해 참고할 수 있는 URL입니다.",
                 "APP 퍼블리싱, ADMIN WEB 퍼블리싱",
               ],
               skills: (
@@ -284,10 +348,10 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             {
               prjKey: "commons",
               subject: "[SI] COMMONS Goodch",
-              link: "https://play.google.com/store/apps/details?id=com.mallup.goodch",
+              link: "https://www.upchain.kr/works/detail/goodch",
               comments: [
-                "서비스 내용에 대해 참고할 수 있는 URL입니다. 앱 화면을 구현하였습니다.",
-                "APP 퍼블리싱",
+                "서비스 내용에 대해 참고할 수 있는 URL입니다.",
+                "APP 퍼블리싱 참여",
               ],
               skills: (
                 <>
@@ -307,9 +371,9 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               ],
               skills: (
                 <>
-                  <Badge colorScheme="blue">Jsp</Badge>
+                  <Badge colorScheme="purple">Jsp</Badge>
                   <Badge colorScheme="purple">HTML5</Badge>
-                  <Badge colorScheme="purple">CSS 3</Badge>
+                  <Badge colorScheme="purple">CSS3</Badge>
                   <Badge colorScheme="purple">bootstrap</Badge>
                   <Badge colorScheme="green">IntelliJ IDEA</Badge>
                 </>
@@ -317,7 +381,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             },
           ]}
         />
-        {/* <ProjectCard
+        <ProjectCard
           prjKey="jt"
           company="스튜디오제이티"
           subject="디자인 작업물"
@@ -331,7 +395,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           }
         >
           <Gallery photos={designs} onClick={openViewerModal} />;
-        </ProjectCard> */}
+        </ProjectCard>
         <ProjectCard
           prjKey="onedesign"
           company="원디자인"
@@ -393,7 +457,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
           skills={
             <>
               <Badge colorScheme="purple">HTML5</Badge>
-              <Badge colorScheme="purple">CSS 3</Badge>
+              <Badge colorScheme="purple">CSS3</Badge>
               <Badge colorScheme="purple">JQuery</Badge>
               <Badge colorScheme="red">Adobe Photoshop</Badge>
               <Badge colorScheme="red">Adobe Illustrator</Badge>

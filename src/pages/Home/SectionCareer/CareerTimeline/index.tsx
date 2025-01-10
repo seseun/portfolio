@@ -16,6 +16,7 @@ function CareerTimeline() {
         <Text as="span">4</Text>
         <Text as="span">5</Text>
         <Text as="span">6</Text>
+        <Text as="span">7</Text>
       </HStack>
       <HStack
         justify="space-between"
@@ -34,6 +35,7 @@ function CareerTimeline() {
         <Divider orientation="vertical" />
         <Divider orientation="vertical" />
         <Divider orientation="vertical" />
+        <Divider orientation="vertical" />
         <HStack
           as="ul"
           spacing={0}
@@ -45,13 +47,15 @@ function CareerTimeline() {
           px={1}
           w="100%"
           h="100%"
+          mt={-5}
           sx={{
             "& > li": {
               alignItems: "center",
-              borderRadius: "sm",
+              borderRadius: 0,
               color: "white",
+              fontSize: "xs",
               fontWeight: 700,
-              h: 8,
+              h: 5,
               px: 2,
             },
           }}
@@ -59,24 +63,24 @@ function CareerTimeline() {
           <Flex
             as="li"
             bgGradient="linear(to-r, pink.500, purple.500)"
-            flex="46% 0 0"
+            flex="40% 0 0"
             justify="flex-start"
-            mt={10}
           >
             Design + Publishing
           </Flex>
           <Flex
             as="li"
             bgGradient="linear(to-r, purple.600 40%, blue.400 100%)"
-            flex={1}
-            mt={5}
+            flex="41% 0 0"
+            mt={10}
           >
             Publishing + Front-end
           </Flex>
           <Flex
             as="li"
             bgGradient="linear(to-r, blue.500 40%, blue.700 100%)"
-            flex="10% 0 0"
+            flex="1"
+            mt={20}
           >
             Front-end
           </Flex>

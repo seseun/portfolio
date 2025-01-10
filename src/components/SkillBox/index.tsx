@@ -3,22 +3,28 @@ import { ReactNode } from "react";
 
 interface SkillBoxProps {
   noBg?: boolean;
+  align?: string;
   children: ReactNode;
 }
 
-function SkillBox({ noBg, children, ...props }: SkillBoxProps & BoxProps) {
+function SkillBox({
+  noBg = false,
+  align = "flex-start",
+  children,
+  ...props
+}: SkillBoxProps & BoxProps) {
   return (
     <Box
+      bgColor={noBg ? "transparent" : "gray.800"}
+      borderRadius="lg"
       display="flex"
       gap={2}
       p={noBg ? 0 : 3}
-      bgColor={noBg ? "transparent" : "gray.800"}
-      borderRadius="lg"
       width="100%"
       {...props}
     >
-      {!noBg && <Text as="span">👾</Text>}
-      <Flex wrap="wrap" gap={2}>
+      {!noBg && <Text as="span">🛠️</Text>}
+      <Flex py={0.5} gap={1} justifyContent={align} w="full" wrap="wrap">
         {children}
       </Flex>
     </Box>

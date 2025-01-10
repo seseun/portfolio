@@ -1,17 +1,10 @@
-import {
-  Box,
-  Button,
-  HStack,
-  Heading,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-import { SkillBox } from "components";
+import { MockupFigure, SkillBox } from "components";
 import ProjectProps from "type/ProjectProps";
 import TemplateProps from "type/TemplateProps";
+
 import ProjectItem from "./ProjectItem";
 import TemplateItem from "./TemplateItem";
 
@@ -53,34 +46,15 @@ function ProjectCard({
         {subject}
         <Text as="small">{date}</Text>
       </Heading>
-      <Text whiteSpace="pre">{desc}</Text>
+
+      <Text whiteSpace="pre" fontSize="md" color="gray.300">
+        {desc}
+      </Text>
       {children && children}
       {!projects ? (
         <HStack align="flex-end" spacing={5}>
           {imgUrl && (
-            <Box
-              as="figure"
-              flex="640px 0 0"
-              width="640px"
-              height="360px"
-              overflow="auto"
-              borderWidth="1rem"
-              borderRadius="lg"
-              borderColor="gray.700"
-              sx={{
-                "::-webkit-scrollbar": {
-                  width: "8px",
-                },
-                "::-webkit-scrollbar-thumb": {
-                  bg: "gray.600",
-                },
-                "::-webkit-scrollbar-track": {
-                  bg: "gray.800",
-                },
-              }}
-            >
-              <Image src={imgUrl} />
-            </Box>
+            <MockupFigure imgUrl={imgUrl} flex="640px 0 0" w="640px" />
           )}
           <Box as="ul" layerStyle="iconList">
             {link && (
@@ -95,9 +69,9 @@ function ProjectCard({
               comments.length > 0 &&
               comments.map((comment, index) => {
                 return (
-                  <Box as="li" key={`comment-${prjKey}-${index}`} mt={2}>
+                  <Box as="li" key={`comment-${prjKey}-${index}`} mt={1.5}>
                     <Text as="i">📌</Text>
-                    <Text>{comment}</Text>
+                    <Text fontSize="sm">{comment}</Text>
                   </Box>
                 );
               })}
@@ -105,9 +79,9 @@ function ProjectCard({
         </HStack>
       ) : (
         <HStack align="stretch" spacing={6}>
-          <Box as="ul" layerStyle="iconList">
+          <Box as="ul" layerStyle="iconList" flex={1}>
             {projects.length > 0 &&
-              projects.slice(0, 7).map((project, index) => {
+              projects.slice(0, 6).map((project, index) => {
                 return (
                   <ProjectItem
                     project={project}
@@ -119,12 +93,13 @@ function ProjectCard({
           <Box
             as="ul"
             layerStyle="iconList"
-            borderLeftColor="gray.700"
+            borderLeftColor="gray.800"
             borderLeftWidth="1px"
             pl={6}
+            flex={1}
           >
             {projects.length > 0 &&
-              projects.slice(7).map((project, index) => {
+              projects.slice(6).map((project, index) => {
                 return (
                   <ProjectItem
                     project={project}

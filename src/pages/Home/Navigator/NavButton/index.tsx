@@ -8,10 +8,10 @@ interface NavButtonProps {
 function NavButton({ emoji, text, ...props }: NavButtonProps & ButtonProps) {
   return (
     <Button
-      fontSize="2xl"
+      fontSize="xl"
+      position="relative"
       py={2}
       w="100%"
-      position="relative"
       _hover={{
         span: {
           opacity: 1,
@@ -24,18 +24,18 @@ function NavButton({ emoji, text, ...props }: NavButtonProps & ButtonProps) {
         <Text
           as="span"
           alignItems="center"
-          bgColor="yellow.50"
-          color="blue.900"
-          borderRadius="md"
+          bgColor="rgba(0,0,0,0.4)"
+          borderRadius="sm"
+          color="gray.400"
           display="inline-flex"
-          fontSize="md"
-          fontWeight="700"
-          h="80%"
+          fontSize="sm"
+          fontWeight="600"
+          h={8}
           justifyContent="center"
           left="calc(100% + 0.5rem)"
           opacity={0}
           position="absolute"
-          px={3}
+          px={2}
           top="10%"
           transition=".2s ease"
         >

@@ -38,19 +38,49 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <Section ref={ref} {...props}>
       <Heading as="h2">🚀 프로젝트</Heading>
+      <ProjectCard
+        prjKey="avco-homepage"
+        company="아브코"
+        subject="자사 홈페이지 리뉴얼"
+        date="2024.04"
+        desc={`자사 홈페이지를 React 웹으로 리뉴얼하였습니다.`}
+        imgUrl={prjAvco}
+        link="https://avco.kr/"
+        comments={[
+          "React, TypeScript를 사용하여 WEB을 구현했습니다.",
+          "React-gsap을 이용했습니다.",
+          "퍼블리싱/프론트개발 단독진행하였습니다.",
+        ]}
+        skills={
+          <>
+            <Badge colorScheme="blue">React</Badge>
+            <Badge colorScheme="blue">TypeScript</Badge>
+            <Badge colorScheme="blue">Chakra-ui</Badge>
+            <Badge colorScheme="blue">React-hook-form</Badge>
+            <Badge colorScheme="blue">Gsap</Badge>
+            <Badge colorScheme="blue">React-gsap</Badge>
+            <Badge colorScheme="blue">Axios</Badge>
+            <Badge colorScheme="blue">Wordpress</Badge>
+            <Badge colorScheme="red">Figma</Badge>
+            <Badge colorScheme="green">GitHub</Badge>
+            <Badge colorScheme="green">VSCode</Badge>
+            <Badge colorScheme="green">Swagger</Badge>
+          </>
+        }
+      />
       <VStack align="stretch" spacing={5}>
         <ProjectCard
           prjKey="kimplabs"
           company="아브코"
           subject="김프랩스"
-          date="2024.05 ~"
+          date="2024.04 ~"
           desc={`아비트리지 투자자들을 위한 김프 등의 트레이딩 정보를 제공하는 웹입니다.`}
           imgUrl={prjKimplabs}
           link="https://kimplabs.com/"
           comments={[
             "Next.js, TypeScript를 사용하여 WEB을 구현했습니다.",
             "웹소캣을 사용합니다.",
-            "프론트개발 단독진행하였습니다.",
+            "퍼블리싱/프론트개발 단독진행하였습니다.",
           ]}
           skills={
             <>
@@ -70,37 +100,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
             </>
           }
         />
-        <ProjectCard
-          prjKey="avco-homepage"
-          company="아브코"
-          subject="자사 홈페이지 리뉴얼"
-          date="2024.04"
-          desc={`자사 홈페이지를 React 웹으로 리뉴얼하였습니다.`}
-          imgUrl={prjAvco}
-          link="https://avco.kr/"
-          comments={[
-            "React, TypeScript를 사용하여 WEB을 구현했습니다.",
-            "React-gsap을 이용했습니다.",
-            "퍼블리싱/프론트개발 단독진행하였습니다.",
-          ]}
-          skills={
-            <>
-              <Badge colorScheme="blue">React</Badge>
-              <Badge colorScheme="blue">TypeScript</Badge>
-              <Badge colorScheme="blue">Chakra-ui</Badge>
-              <Badge colorScheme="blue">React-hook-form</Badge>
-              <Badge colorScheme="blue">Gsap</Badge>
-              <Badge colorScheme="blue">React-gsap</Badge>
-              <Badge colorScheme="blue">Axios</Badge>
-              <Badge colorScheme="blue">Wordpress</Badge>
-              <Badge colorScheme="red">Figma</Badge>
-              <Badge colorScheme="green">GitHub</Badge>
-              <Badge colorScheme="green">VSCode</Badge>
-              <Badge colorScheme="green">Swagger</Badge>
-            </>
-          }
-        />
-        <ProjectCard
+        {/* <ProjectCard
           prjKey="gapcha"
           company="아브코"
           subject="갭챠"
@@ -129,7 +129,7 @@ const SectionProject = forwardRef<HTMLDivElement>((props, ref) => {
               <Badge colorScheme="green">Postman</Badge>
             </>
           }
-        />
+        /> */}
         <ProjectCard
           prjKey="mobytalk"
           company="모비텍"
